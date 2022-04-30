@@ -12,7 +12,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
   title: 'Vite vui',
-  base: '/vite-vui-docs/',
+  base: './',
   themeConfig: {
     search: true,
     sidebar: {
