@@ -1,47 +1,97 @@
 module.exports = {
-  head: [
-    [
-      'meta',
-      {
-        name: 'viewport',
-        content:
-          'width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no',
-      },
-    ],
-    ['meta', { name: 'keywords', content: 'vite vui' }],
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-  ],
-  title: 'Vite vui',
-  base: './',
+  lang: 'zh-CN',
+  title: 'MyBlog',
+  description: '随便写写',
+  lastUpdated: true,
+
   themeConfig: {
-    search: true,
-    sidebar: {
-      '/': [
-        {
-          text: 'vui',
-          children: [
-            { text: '介绍', link: '/' },
-            { text: '日志', link: '/components/log' },
-            { text: 'Button', link: '/components/button/' },
-            { text: 'Layout', link: '/components/layout/' },
-            { text: 'contextmenu', link: '/components/contextmenu/' },
-          ],
-        },
-        {
-          text: 'vuu',
-          children: [
-            { text: '介绍', link: '/vuu/' },
-            { text: '日志', link: '/vuu/log' },
-            { text: '某个功能', link: '/vuu/any' },
-          ],
-        },
-      ],
+    repo: 'vuejs/vitepress',
+    docsDir: 'docs',
+    docsBranch: 'main',
+    editLinks: true,
+    editLinkText: 'Edit this page on GitHub',
+    lastUpdated: 'Last Updated',
+
+    algolia: {
+      appId: '8J64VVRP8K',
+      apiKey: 'a18e2f4cc5665f6602c5631fd868adfd',
+      indexName: 'vitepress'
     },
-    author: 'bhabgs',
+
+    carbonAds: {
+      carbon: 'CEBDT27Y',
+      custom: 'CKYD62QM',
+      placement: 'vuejsorg'
+    },
+
     nav: [
-      { text: '首页', link: '/' },
-      { text: '分类', link: '/tags' },
+      { text: '主页', link: '/', activeMatch: '^/$|^/guide/' },
+      {
+        text: '分类',
+        link: '/config/basics',
+        activeMatch: '^/config/',
+        items: [
+          { text: '主页', link: '/', activeMatch: '^/$|^/guide/' },
+          { text: '主页', link: '/', activeMatch: '^/$|^/guide/' },
+        ]
+      },
+      {
+        text: '我的gitee',
+        link: 'https://gitee.com/zpx88688'
+      }
     ],
-  },
-  dest: 'public',
-};
+
+    sidebar: {
+      '/guide/': getGuideSidebar(),
+      '/config/': getConfigSidebar(),
+      '/': getGuideSidebar()
+    }
+  }
+}
+
+
+function getGuideSidebar() {
+  return [
+    {
+      text: 'Introduction',
+      children: [
+        { text: 'What is VitePress?', link: '/' },
+        { text: 'Getting Started', link: '/guide/getting-started' },
+        { text: 'Configuration', link: '/guide/configuration' },
+        { text: 'Asset Handling', link: '/guide/assets' },
+        { text: 'Markdown Extensions', link: '/guide/markdown' },
+        { text: 'Using Vue in Markdown', link: '/guide/using-vue' },
+        { text: 'Deploying', link: '/guide/deploy' }
+      ]
+    },
+    {
+      text: 'Advanced',
+      children: [
+        { text: 'Frontmatter', link: '/guide/frontmatter' },
+        { text: 'Theming', link: '/guide/theming' },
+        { text: 'API Reference', link: '/guide/api' },
+        {
+          text: 'Differences from Vuepress',
+          link: '/guide/differences-from-vuepress'
+        }
+      ]
+    }
+  ]
+}
+
+function getConfigSidebar() {
+  return [
+    {
+      text: 'App Config',
+      children: [{ text: 'Basics', link: '/config/basics' }]
+    },
+    {
+      text: 'Theme Config',
+      children: [
+        { text: 'Homepage', link: '/config/homepage' },
+        { text: 'Algolia Search', link: '/config/algolia-search' },
+        { text: 'Carbon Ads', link: '/config/carbon-ads' }
+      ]
+    }
+  ]
+}
