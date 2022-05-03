@@ -40,8 +40,8 @@ function getGuideSidebar() {
     {
       text: '《重构-改善既有代码的设计》',
       children: [
-        { text: '重构，第一个示例', link: '/readingNotes/《重构-改善既有代码的设计》/《第1章》' },
-        { text: 'Getting Started', link: '/guide/getting-started' },
+        { text: '第一章：重构，第一个示例', link: 'readingNotes/《重构-改善既有代码的设计》/《第1章：重构，第一个示例》' },
+        { text: '第二章：重构的原则', link: 'readingNotes/《重构-改善既有代码的设计》/《第2章：重构的原则》' },
         { text: 'Deploying', link: '/guide/deploy' }
       ]
     },
