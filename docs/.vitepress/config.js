@@ -19,8 +19,11 @@ module.exports = {
         text: '分类',
         link: '/config/basics',
         items: [
-          { text: '主页', link: '/' },
-          { text: '主页', link: '/' },
+          { text: 'React', link: '/' },
+          { text: 'Vue', link: '/' },
+          { text: 'JavaScript', link: '/' },
+          { text: 'Python', link: '/' },
+          { text: 'FastApi', link: '/' },
         ]
       },
       {
