@@ -3,7 +3,6 @@ module.exports = {
   title: 'MyBlog',
   description: '随便写写',
   logo: '././public/logo.png',
-  base: './blog/',
   themeConfig: {
     docsDir: 'docs',
     docsBranch: 'main',
