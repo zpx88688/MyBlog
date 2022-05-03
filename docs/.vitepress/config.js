@@ -38,9 +38,9 @@ module.exports = {
 function getGuideSidebar() {
   return [
     {
-      text: 'Introduction',
+      text: '《重构-改善既有代码的设计》',
       children: [
-        { text: 'What is VitePress?', link: '/' },
+        { text: '重构，第一个示例', link: '/readingNotes/《重构-改善既有代码的设计》/《第1章》' },
         { text: 'Getting Started', link: '/guide/getting-started' },
         { text: 'Deploying', link: '/guide/deploy' }
       ]
