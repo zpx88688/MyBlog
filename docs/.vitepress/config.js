@@ -2,8 +2,9 @@ module.exports = {
   lang: 'zh-CN',
   title: 'MyBlog',
   description: '随便写写',
-  logo: '/assets/img/logo.png',
+  logo: './img/logo.png',
   lastUpdated: true,
+
   themeConfig: {
     repo: 'vuejs/vitepress',
     docsDir: 'docs',
