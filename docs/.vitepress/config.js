@@ -12,7 +12,7 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
-    base:'./dist/',
+    base:'./docs/',
     nav: [
       { text: '主页', link: '/' },
       {
