@@ -2,15 +2,11 @@ module.exports = {
   lang: 'zh-CN',
   title: 'MyBlog',
   description: '随便写写',
-  logo: './img/logo.png',
-  lastUpdated: true,
+  logo: '././public/logo.png',
 
   themeConfig: {
-    repo: 'vuejs/vitepress',
     docsDir: 'docs',
     docsBranch: 'main',
-    editLinks: true,
-    editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
    
     nav: [
