@@ -4,7 +4,7 @@ module.exports = {
   description: '随便写写',
   logo: '/assets/img/logo.png',
   lastUpdated: true,
-
+  base:'./',
   themeConfig: {
     repo: 'vuejs/vitepress',
     docsDir: 'docs',
@@ -12,7 +12,7 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
-    base:'./docs/',
+   
     nav: [
       { text: '主页', link: '/' },
       {
