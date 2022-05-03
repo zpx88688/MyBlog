@@ -4,7 +4,6 @@ module.exports = {
   description: '随便写写',
   logo: '/assets/img/logo.png',
   lastUpdated: true,
-  base:'./docs/',
   themeConfig: {
     repo: 'vuejs/vitepress',
     docsDir: 'docs',
