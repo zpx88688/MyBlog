@@ -8,7 +8,6 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'main',
     lastUpdated: 'Last Updated',
-   
     nav: [
       { text: '主页', link: '/' },
       {
