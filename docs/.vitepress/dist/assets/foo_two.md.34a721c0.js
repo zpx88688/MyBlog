@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as r}from"./app.092819ca.js";const f='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"bar/four.md"}',a={};function o(c,s,n,_,p,i){return r(),e("div")}var l=t(a,[["render",o]]);export{f as __pageData,l as default};

@@ -2,6 +2,7 @@ module.exports = {
   lang: 'zh-CN',
   title: 'MyBlog',
   description: '随便写写',
+  logo: '/assets/img/logo.png',
   lastUpdated: true,
 
   themeConfig: {
@@ -12,27 +13,14 @@ module.exports = {
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
 
-    algolia: {
-      appId: '8J64VVRP8K',
-      apiKey: 'a18e2f4cc5665f6602c5631fd868adfd',
-      indexName: 'vitepress'
-    },
-
-    carbonAds: {
-      carbon: 'CEBDT27Y',
-      custom: 'CKYD62QM',
-      placement: 'vuejsorg'
-    },
-
     nav: [
-      { text: '主页', link: '/', activeMatch: '^/$|^/guide/' },
+      { text: '主页', link: '/' },
       {
         text: '分类',
         link: '/config/basics',
-        activeMatch: '^/config/',
         items: [
-          { text: '主页', link: '/', activeMatch: '^/$|^/guide/' },
-          { text: '主页', link: '/', activeMatch: '^/$|^/guide/' },
+          { text: '主页', link: '/' },
+          { text: '主页', link: '/' },
         ]
       },
       {
@@ -43,7 +31,7 @@ module.exports = {
 
     sidebar: {
       '/guide/': getGuideSidebar(),
-      '/config/': getConfigSidebar(),
+      // '/config/': getConfigSidebar(),
       '/': getGuideSidebar()
     }
   }
@@ -57,41 +45,31 @@ function getGuideSidebar() {
       children: [
         { text: 'What is VitePress?', link: '/' },
         { text: 'Getting Started', link: '/guide/getting-started' },
-        { text: 'Configuration', link: '/guide/configuration' },
-        { text: 'Asset Handling', link: '/guide/assets' },
-        { text: 'Markdown Extensions', link: '/guide/markdown' },
-        { text: 'Using Vue in Markdown', link: '/guide/using-vue' },
         { text: 'Deploying', link: '/guide/deploy' }
       ]
     },
     {
       text: 'Advanced',
       children: [
-        { text: 'Frontmatter', link: '/guide/frontmatter' },
-        { text: 'Theming', link: '/guide/theming' },
         { text: 'API Reference', link: '/guide/api' },
-        {
-          text: 'Differences from Vuepress',
-          link: '/guide/differences-from-vuepress'
-        }
       ]
     }
   ]
 }
 
-function getConfigSidebar() {
-  return [
-    {
-      text: 'App Config',
-      children: [{ text: 'Basics', link: '/config/basics' }]
-    },
-    {
-      text: 'Theme Config',
-      children: [
-        { text: 'Homepage', link: '/config/homepage' },
-        { text: 'Algolia Search', link: '/config/algolia-search' },
-        { text: 'Carbon Ads', link: '/config/carbon-ads' }
-      ]
-    }
-  ]
-}
+// function getConfigSidebar() {
+//   return [
+//     {
+//       text: 'App Config',
+//       children: [{ text: 'Basics', link: '/config/basics' }]
+//     },
+//     {
+//       text: 'Theme Config',
+//       children: [
+//         { text: 'Homepage', link: '/config/homepage' },
+//         { text: 'Algolia Search', link: '/config/algolia-search' },
+//         { text: 'Carbon Ads', link: '/config/carbon-ads' }
+//       ]
+//     }
+//   ]
+// }
